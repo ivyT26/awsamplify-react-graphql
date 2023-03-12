@@ -1,11 +1,27 @@
 import React, {Component} from "react";
 
-export default class App extends Component {
+import "@aws-amplify/ui-react/styles.css";
+import {
+  withAuthenticator,
+  Button,
+  Heading,
+  Image,
+  View,
+  Card,
+} from "@aws-amplify/ui-react";
+
+class App extends Component {
     render() {
-        return(
-            <div>
-                <h1>Hello To AWS React GraphQL app!</h1>
-            </div>
+        const { signOut } = this.props;
+        return (
+          <View className="App">
+            <Card>
+              <Heading level={1}>We now have Auth!</Heading>
+            </Card>
+            <Button onClick={signOut}>Sign Out</Button>
+          </View>
         );
     }
 }
+
+export default withAuthenticator(App);

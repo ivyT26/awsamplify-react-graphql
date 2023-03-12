@@ -27,7 +27,9 @@
     "webpack-dev-server": "^4.11.1"
   },
   "dependencies": {
+    "@aws-amplify/ui-react": "^4.3.10",
     "@popperjs/core": "^2.11.6",
+    "aws-amplify": "^5.0.18",
     "bootstrap": "^5.2.3",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
